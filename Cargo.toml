@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/rnmap-core",
+    "crates/rnmap",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["rnmap contributors"]
+license = "MIT"
+repository = "https://github.com/rnmap/rnmap"
+description = "A standalone Rust port-scanner inspired by Nmap"
+
+[workspace.dependencies]
+tokio = { version = "1.40", features = ["full"] }
+clap = { version = "4.5", features = ["derive"] }
+ipnet = "2.10"
+socket2 = { version = "0.5", features = ["all"] }
+dns-lookup = "2.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+quick-xml = { version = "0.36", features = ["serialize"] }
+anyhow = "1"
+thiserror = "1"
+rand = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+regex = "1"
+once_cell = "1"
+hostname = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true

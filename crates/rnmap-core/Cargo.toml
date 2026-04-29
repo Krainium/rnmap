@@ -1,0 +1,24 @@
+[package]
+name = "rnmap-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Library powering the rnmap scanner"
+
+[dependencies]
+tokio.workspace = true
+ipnet.workspace = true
+socket2.workspace = true
+dns-lookup.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+quick-xml.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+rand.workspace = true
+chrono.workspace = true
+futures.workspace = true
+regex.workspace = true
+once_cell.workspace = true
+hostname.workspace = true
